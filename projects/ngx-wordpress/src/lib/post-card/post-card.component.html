@@ -1,0 +1,11 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title [innerHTML]="post.title.rendered"></ion-card-title>
+    <ion-card-subtitle>{{ post.date_gmt | date }}</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <img [src]="post.media_url">
+    <div [innerHTML]="post.excerpt.rendered"></div>
+    <ion-button expand="full" fill="clear" (click)="openDetails()" text-right>Read More...</ion-button>
+  </ion-card-content>
+</ion-card>
